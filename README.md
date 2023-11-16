@@ -44,3 +44,10 @@ The mask is displayed, highlighting the detected green color against a black bac
 
 ### Step 7: Return the Percentage
 Finally, the calculated percentage of the green area within the image is returned by the program.
+
+To learn how to work with OpenCV I used the following tutorial: 
+[OpenCV Tutorial](https://www.youtube.com/watch?v=qCR2Weh64h4&list=PLzMcBGfZo4-lUA8uGjeXhBUUzPYc6vZRn)
+
+Learnt about the different types of color models:
+[Color Models and Color Spaces](https://programmingdesignsystems.com/color/color-models-and-color-spaces/index.html)
+
