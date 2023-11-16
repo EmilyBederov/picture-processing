@@ -16,6 +16,7 @@ The program sets two bounds to capture the spectrum of green hues within the ima
 ```python
 green_lower_bound = np.array([36, 25, 25])  # Represents the lightest green
 green_upper_bound = np.array([86, 255, 255]) # Represents the darkest green
+```
 
 Hue: First value, measured in degrees on the color wheel.
 Saturation: Second value, indicating the color intensity.
@@ -28,14 +29,15 @@ Pixels within the green color area are set to white.
 All other pixels are set to black.
 This effectively isolates the green areas in the image.
 
-Step 5: Analyze Green Percentage
+### Step 5: Analyze Green Percentage
 The analysis involves calculating the sum of white pixels (representing green) in the mask and the total number of pixels in the image:
 
-# Calculate the percentage of green in the image
+``` Calculate the percentage of green in the image
 percentage_of_green = (np.sum(mask == 255) / total_pixels) * 100
+```
 
-Step 6: Display the Mask
+### Step 6: Display the Mask
 The mask is displayed, highlighting the detected green color against a black background. This display continues until any key is pressed, which then triggers the closure of all OpenCV windows.
 
-Step 7: Return the Percentage
+### Step 7: Return the Percentage
 Finally, the calculated percentage of the green area within the image is returned by the program.
