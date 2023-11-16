@@ -33,6 +33,7 @@ This effectively isolates the green areas in the image.
 The analysis involves calculating the sum of white pixels (representing green) in the mask and the total number of pixels in the image:
 
 ``` Calculate the percentage of green in the image
+sum_white_pixels = np.sum(mask == 255)
 percentage_of_green = (np.sum(mask == 255) / total_pixels) * 100
 ```
 
