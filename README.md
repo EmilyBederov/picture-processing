@@ -22,8 +22,7 @@ Hue: First value, measured in degrees on the color wheel.
 Saturation: Second value, indicating the color intensity.
 Value: Third value, indicating the brightness level, where 0 is completely black and 255 is the brightest.
 
-![Hue]((https://answers.opencv.org/upfiles/15186761085555681.png))
-
+![Hue](https://answers.opencv.org/upfiles/15186761085555681.png)
 
 ### Step 4: Create a Mask
 A mask is generated where:
