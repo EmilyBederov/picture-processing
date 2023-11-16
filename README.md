@@ -1,20 +1,41 @@
-Image Processing
-The program performs a statistical analysis to determine the percentage of the image that is green, ranging from light to dark hues. It also displays the original image with the detected green color highlighted.
-Algorithm Explanation:
-Using the OpenCV library, the program first reads the given image and loads its colors, ignoring any transparency. It then converts the image's color space from BGR (Blue, Green, Red) to HSV (Hue, Saturation, Value). Next, the program defines two bounds to represent the hues of green:
-•	The lower bound represents the lightest green.
-•	The upper bound represents the darkest green.
+# Image Processing Analysis
 
+This program conducts a statistical analysis to ascertain the percentage of the green color present within an image, considering all shades from light to dark green. It also showcases the original image with the highlighted green color that has been detected.
 
+## Algorithm Explanation
 
+### Step 1: Read the Image
+Using the **OpenCV library**, the program initiates the process by reading the input image and loading its color data, while ignoring any transparency present.
 
-•	The first value (hue) is measured in degrees on the color wheel.
-•	The second value (saturation) indicates the intensity level of a color.
-•	The third value (value) refers to the brightness level, where 0 is completely black (no brightness at all) and 255 is the brightest.
+### Step 2: Convert Color Space
+The color space of the image is converted from BGR (Blue, Green, Red) to HSV (Hue, Saturation, Value) to better analyze and detect colors.
 
-The program then creates a mask—a binary image where pixels within the defined green color area are set to white, and all other pixels are set to black. This mask isolates all the green areas in the image, setting them to white, while all non-green areas are set to black.
-To analyze the percentage of green color in the image, we sum up all the white pixels in the mask, then sum up all the pixels in the image. The percentage of the green area is calculated by dividing the sum of white pixels by the total number of pixels and multiplying the result by 100.
-To display the image with the detected green color highlighted, the program uses the mask, where the detected color appears as white pixels and all other colors appear as black. The mask is displayed indefinitely until a key is pressed, at which point all OpenCV windows are closed.
-Finally, the program returns the percentage of the green area within the given image.
+### Step 3: Define Green Hue Bounds
+The program sets two bounds to capture the spectrum of green hues within the image:
 
-![image](https://github.com/EmilyBederov/picture-processing/assets/151040825/f93bc75e-8fdf-4687-8482-5c8f7e13a78a)
+```python
+green_lower_bound = np.array([36, 25, 25])  # Represents the lightest green
+green_upper_bound = np.array([86, 255, 255]) # Represents the darkest green
+
+Hue: First value, measured in degrees on the color wheel.
+Saturation: Second value, indicating the color intensity.
+Value: Third value, indicating the brightness level, where 0 is completely black and 255 is the brightest.
+
+### Step 4: Create a Mask
+A mask is generated where:
+
+Pixels within the green color area are set to white.
+All other pixels are set to black.
+This effectively isolates the green areas in the image.
+
+Step 5: Analyze Green Percentage
+The analysis involves calculating the sum of white pixels (representing green) in the mask and the total number of pixels in the image:
+
+# Calculate the percentage of green in the image
+percentage_of_green = (np.sum(mask == 255) / total_pixels) * 100
+
+Step 6: Display the Mask
+The mask is displayed, highlighting the detected green color against a black background. This display continues until any key is pressed, which then triggers the closure of all OpenCV windows.
+
+Step 7: Return the Percentage
+Finally, the calculated percentage of the green area within the image is returned by the program.
