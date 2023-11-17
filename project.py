@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-def procces(image_path):
+def process(image_path):
 
     img = cv2.imread(image_path, 1)
     #equalized_img = cv2.equalizeHist(img)
@@ -28,5 +28,5 @@ def procces(image_path):
 
     return (sum_white_pixels / Total_pixels) * 100
 
-print("precntege of green is:\n" , procces('/Users/emilybederov/Desktop/picture_proccesing/tree.jpg'), "%")
+print("precntege of green is:\n" , process('/Users/emilybederov/Desktop/picture_proccesing/tree.jpg'), "%")
 
