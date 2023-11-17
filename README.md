@@ -1,6 +1,6 @@
 # Image Processing Analysis
 
-This program conducts a statistical analysis to ascertain the percentage of the green color present within an image, considering all shades from light to dark green. It also showcases the original image with the highlighted green color that has been detected..
+This program conducts a statistical analysis to ascertain the percentage of the green color present within an image, considering all shades from light to dark green. It also showcases the original image with the highlighted green color that has been detected.
 
 ## Algorithm Explanation
 
