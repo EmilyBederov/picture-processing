@@ -44,6 +44,15 @@ The mask is displayed, highlighting the detected green color against a black bac
 
 ### Step 7: Return the Percentage
 Finally, the calculated percentage of the green area within the image is returned by the program.
+## Image Processing: Before and After
+
+**Before:**
+
+![Before Image Processing](picture_processing/tree.jpg)
+
+**After:**
+
+![After Image Processing](images/after.jpg)
 
 ### References
 To learn how to work with OpenCV I used the following tutorial: 
