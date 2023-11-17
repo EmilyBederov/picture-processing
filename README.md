@@ -48,11 +48,11 @@ Finally, the calculated percentage of the green area within the image is returne
 
 **Before:**
 
-![Before Image Processing](picture_processing/tree.jpg)
+![Before Image Processing](picture-processing/tree.jpg)
 
 **After:**
 
-![After Image Processing](images/after.jpg)
+![After Image Processing](picture-processing/after_tree_pic.png)
 
 ### References
 To learn how to work with OpenCV I used the following tutorial: 
